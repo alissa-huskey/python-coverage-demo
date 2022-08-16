@@ -3,31 +3,34 @@
 Pytest Coverage Demo Project
 ============================
 
-> This project demonstrates how to setup a Python project using Poetry to get
-> a report on code coverage.
+> Code coverage demo
+
+This project demonstrates how to setup a Python project using Poetry to get
+a report on code coverage.
 
 <details open>
   <summary>Table of Contents</summary>
 
-* [⚡️ Quick start](#-quick-start)
-* [⚙️  Example](#-example)
-  * [Manifest](#manifest)
-  * [🤖 Usage](#-usage)
-     * [1. Running tests](#1-running-tests)
-     * [2. View coverage report](#2-view-coverage-report)
-* [🚀 Setup](#-setup)
+* [✨&nbsp;Quick start](#quick-start)
+* [:notebook: Manifest](#notebook-manifest)
+* [🤖&nbsp;Usage](#usage)
+   * [1. Running tests](#1-running-tests)
+   * [2. View coverage report](#2-view-coverage-report)
+* [🚀 Setup](#setup)
   * [Dependencies](#dependencies)
   * [1. Install Poetry](#1-install-poetry)
   * [2. Create project](#2-create-project)
   * [3. Install test packages](#3-install-test-packages)
   * [4. Configure coverage](#4-configure-coverage)
   * [5. Update .gitignore](#5-update-gitignore)
-* [💡 See also](#-see-also)
-* [📖 Meta](#-meta)
+* [💡 See also](#see-also)
+* [:clipboard: Meta](#clipboard-meta)
 
 </details>
 
-## ⚡️ Quick start
+<br />
+
+## ✨&nbsp;Quick start
 
 Install packages and start a `poetry` shell.
 
@@ -42,12 +45,12 @@ Then generate and view the coverage report.
 coverage run -m pytest && coverage report -m
 ```
 
+![Screenshot](screenshot.png)
+
 <p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
-⚙️ &nbsp;Example
-----------------
-
-### Manifest
+:notebook: Manifest
+-------------------
 
 This project was generated using the `poetry new` command and has this
 directory structure.
@@ -79,18 +82,19 @@ Here are more detailed descriptions of the relavant files.
 
 <p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
-### 🤖&nbsp;Usage
+🤖&nbsp;Usage
+--------------
 
-#### 1. Running tests
+### 1. Running tests
 
-First you'll need to run your tests via the `coverage` program.
+First you'll need to run your tests using the `coverage` program.
 
 ```bash
 coverage run -m pytest
 ```
 
 Alternatively if you set up the configurations in your `pyproject.py` per the
-instructions below you can simply type:
+[instructions](#4-configure-coverage) below you can simply type:
 
 ```bash
 coverage run
@@ -98,8 +102,6 @@ coverage run
 
 This will run your tests via `pytest` as usual and will additionally generate
 a `.coverage` file.
-
-> Output
 
 ```
 ========================= test session starts ==========================
@@ -115,25 +117,23 @@ tests/test_python_coverage_demo.py ...                            [100%]
 
 <p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
-#### 2. View coverage report
+### 2. View coverage report
 
-To view the coverage report, replace `python_coverage_demo` with the path(s) to
-your code in the following full command:
+To view the coverage report replace `python_coverage_demo` with the path(s) to
+your code in the following command:
 
 ```bash
 coverage report -m --include='python_coverage_demo/*.py'
 ```
 
 Alternatively if you set up the configurations in your `pyproject.py` per the
-instructions below you can simply type:
+[instructions](#4-configure-coverage) below you can simply type:
 
 ```bash
 coverage report
 ```
 
 Ta da!
-
-> Output
 
 ```
 Name                               Stmts   Miss  Cover   Missing
@@ -144,23 +144,30 @@ python_coverage_demo/demo.py           6      2    67%   5, 8
 TOTAL                                  7      2    71%
 ```
 
+<p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
+
 🚀&nbsp;Setup
----------------
+--------------
 
 ### Dependencies
 
 This project makes use of the following tools:
 
-* [Poetry][] -- dependency management
-* [Pytest][] -- test runner
-* [Coverage.py][] -- code coverage measurement
+| Tool            | Purpose                   |
+|-----------------|---------------------------|
+| [Poetry][]      | dependency management     |
+| [Pytest][]      | test runner               |
+| [Coverage.py][] | code coverage measurement |
 
+<p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
 ### 1. Install Poetry
 
 Install [Poetry][install-poetry] according to its docs.
 
 [install-poetry]: https://python-poetry.org/docs/#installation
+
+<p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
 ### 2. Create project
 
@@ -169,6 +176,8 @@ Use an existing Poetry project or create one using the `poetry new` command.
 ```bash
 poetry new my-project
 ```
+
+<p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
 ### 3. Install test packages
 
@@ -183,6 +192,8 @@ Then start a poetry shell.
 ```bash
 poetry shell
 ```
+
+<p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
 ### 4. Configure `coverage`
 
@@ -199,6 +210,8 @@ command_line = "-m pytest"
 include = ["python_coverage_demo/*.py"]
 show_missing = true
 ```
+
+<p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
 ### 5. Update `.gitignore`
 
@@ -227,11 +240,10 @@ __pycache__
 
 <p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
 
-📖&nbsp;Meta
--------------
+:clipboard: Meta
+----------------
 
-The [python-coverage-demo][] project is distributed under the [MIT][LICENSE.txt] license.
+The [python-coverage-demo][] project is distributed under the [MIT](LICENSE.txt) license.
 
 [python-coverage-demo]: https://github.com/alissa-huskey/python-coverage-demo
 
-<p align="right">(<a href="#user-content-readme-top">back to top</a>)</p>
