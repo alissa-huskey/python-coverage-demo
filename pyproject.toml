@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "python-coverage-demo"
+version = "0.1.0"
+description = "This project demonstrates how to setup a Python project using poetry to get a report on code coverage."
+authors = ["Alissa Huskey <alissa.huskey@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pynvim = "^0.4.3"
+ipython = "^8.4.0"
+pylint = "^2.14.5"
+pylama = "^8.4.1"
+green = "^3.4.2"
+pdbpp = "^0.10.3"
+coverage = "^6.4.3"
+python-dotenv = "^0.20.0"
+
+[tool.coverage.run]
+command_line = "-m pytest"
+
+[tool.coverage.report]
+include = ["python_coverage_demo/*.py"]
+show_missing = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,4 @@
+__pycache__
+.pycache
+.pytest_cache
+.coverage
